@@ -18,4 +18,4 @@ export interface ChatMessage {
   isUser?: boolean;
 }
 
-export type CategoryType = 'ALL' | 'FAVORITES' | 'CUSTOM' | 'ESPN' | 'FOX SPORTS' | 'DAZN' | 'WIN SPORTS' | 'BEIN SPORT' | 'FIFA' | 'OTHERS';
+export type CategoryType = 'ALL' | 'FAVORITES' | 'CUSTOM' | 'ESPN' | 'FOX SPORTS' | 'DAZN' | 'WIN SPORTS' | 'BEIN SPORT' | 'FIFA' | 'BENGALI' | 'HINDI' | 'KIDS' | 'MUSICS' | 'NEWS' | 'MOVIES' | 'ENGLISH' | 'SPORTS' | 'OTHERS';

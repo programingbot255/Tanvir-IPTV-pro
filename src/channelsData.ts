@@ -293,5 +293,785 @@ export const CHAT_USERNAMES = [
 export const AVATAR_COLORS = [
   "bg-red-500", "bg-blue-500", "bg-green-500", "bg-yellow-500",
   "bg-purple-500", "bg-pink-500", "bg-indigo-500", "bg-teal-500",
-  "bg-orange-500", "bg-cyan-500"
+  "bg-orange-500", "bg-cyan-500",
+  // Custom Additions
+
+  {
+    id: "ext-fv0b1swcc",
+    name: "Caze TV",
+    url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-m2x3v7l1s",
+    name: "Z বাংলাসোনারা",
+    url: "http://str2.v3v3v.xyz:2082/live/rokhsi25_951396/POm6KqnW/277428.ts",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-nwf9yk68o",
+    name: "beIN SPORTS 4k",
+    url: "http://go8knm.optikl.ink/X/index.php/Besyria3/video.m3u8",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-sa54n9emf",
+    name: "TYC SPORT",
+    url: "https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-79yye8m8k",
+    name: "Bein Sports 1",
+    url: "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-2am1c8qk0",
+    name: "WIN Sports",
+    url: "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8",
+    category: "FIFA",
+    logo: "https://i.postimg.cc/661Rm2z8/image.png",
+    country: "Global"
+  },
+  {
+    id: "ext-3pkzpgifb",
+    name: "Bangla\",Channel I HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/8e998f20a9cc52cb8eb1f52a5bf38204",
+    country: "Global"
+  },
+  {
+    id: "ext-nevil846m",
+    name: "Bangla\",Jamuna TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/aac6488b68844e5756ab46eb79659de8",
+    country: "Global"
+  },
+  {
+    id: "ext-7tczdqvz9",
+    name: "Bangla\",Ekattor HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/d91767995b2f2a54852c92bbbc20daa7",
+    country: "Global"
+  },
+  {
+    id: "ext-phzwahcya",
+    name: "Bangla\",NTV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560841094.png",
+    country: "Global"
+  },
+  {
+    id: "ext-xth9barck",
+    name: "ETV",
+    url: "https://tvsen6.aynaott.com/etv/index.m3u8?e=1779283752&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=2c4b5c7a7044076e38b667d37971baec",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/8a1af81802b0728c064c2adabcdc72c8",
+    country: "Global"
+  },
+  {
+    id: "ext-sa6p0r2tl",
+    name: "RTV",
+    url: "https://tvsen5.aynaott.com/RtvHD/index.m3u8?e=1779283751&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=678f1f8ec03b1af7b76d013d33f45198",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/094587a26f2c5e4f2962104728ec8c5d",
+    country: "Global"
+  },
+  {
+    id: "ext-rzz2dsink",
+    name: "Channel 1 News 4K",
+    url: "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/channel1bd.stream/tracks-v1a1/mono.m3u8",
+    category: "BENGALI",
+    logo: "https://raw.githubusercontent.com/subirkumarpaul/Logo/refs/heads/main/Channel%201.png",
+    country: "Global"
+  },
+  {
+    id: "ext-tusm88j9r",
+    name: "Bangla\",Somoy TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png",
+    country: "Global"
+  },
+  {
+    id: "ext-k1wcjjme4",
+    name: "Bangla\",Somoy TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/1702-audio_113322_eng=113200-video=2202800.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png",
+    country: "Global"
+  },
+  {
+    id: "ext-byuw0cnll",
+    name: "Bangla\",Bangla Vision",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561344354.png",
+    country: "Global"
+  },
+  {
+    id: "ext-95ov1eg67",
+    name: "Bangla\",Maasranga TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/1b5cb8c7901739cd7d201a38d2ab4737",
+    country: "Global"
+  },
+  {
+    id: "ext-o9j67m55p",
+    name: "Gazi TV",
+    url: "https://tvsen5.aynaott.com/Ravc7gPCZpxk/index.m3u8?e=1779283754&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=0cdc69aae0d57f2ce93a41a608a3d821",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/417a833f6d83021c99bfc3d4176610f4",
+    country: "Global"
+  },
+  {
+    id: "ext-ztczws4va",
+    name: "ATN Bangla",
+    url: "https://tvsen5.aynaott.com/atnbangla/index.m3u8?e=1779283752&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=e20058ae495a80a83ec09cb9d82b9253",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/eff41809fca04f7c1da5481e135d7913",
+    country: "Global"
+  },
+  {
+    id: "ext-d6ewvki6y",
+    name: "Bangla\",ATN News",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739962961772.png",
+    country: "Global"
+  },
+  {
+    id: "ext-injamtvxn",
+    name: "Bangla\",Independent TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/6653326503fcade746d87881d5c99697",
+    country: "Global"
+  },
+  {
+    id: "ext-xe6hauvu4",
+    name: "Bangla\",Deepto TV HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/76717b7a598a30815a1bdb16ecd3af6c",
+    country: "Global"
+  },
+  {
+    id: "ext-o9jnfvikr",
+    name: "Bangla\",Channel 24 HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735556516924.png",
+    country: "Global"
+  },
+  {
+    id: "ext-p0n2h9uov",
+    name: "Bangla\",News 24 HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770186895850.png",
+    country: "Global"
+  },
+  {
+    id: "ext-zrwjxyy77",
+    name: "Bangla\",Channel 9 HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770188008067.png",
+    country: "Global"
+  },
+  {
+    id: "ext-o3hlm12xm",
+    name: "Duronto TV",
+    url: "https://tvsen6.aynaott.com/durontotv-live/index.m3u8?e=1779283757&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=3da514e08a15c80daed60a18b3f423fa",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/51f1530c076c027e431bf18a49613f0b",
+    country: "Global"
+  },
+  {
+    id: "ext-krre6fcbk",
+    name: "Bijoy TV",
+    url: "https://tvsen6.aynaott.com/bijoytv/index.m3u8?e=1779283761&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=5c8b85f4f92c654640f3abdc1ac061c6",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/f23d6f82c1a16458fe0e4c6f11b8fd87",
+    country: "Global"
+  },
+  {
+    id: "ext-ewue6o4pz",
+    name: "Bangla\",DBC News HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770186306600.png",
+    country: "Global"
+  },
+  {
+    id: "ext-2ikk66sly",
+    name: "Bangla\",Ekhon TV",
+    url: "https://tvsen6.aynaott.com/ekhontv/index.m3u8?e=1779283769&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=d3dc5ee2773ce51cc8c2805a647bf2de",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/274c30c492e8795c8011d0129113f4bc",
+    country: "Global"
+  },
+  {
+    id: "ext-27dzj9rcz",
+    name: "Bangla\",SRK TV",
+    url: "https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005940155.png",
+    country: "Global"
+  },
+  {
+    id: "ext-qac6f1xyv",
+    name: "Thikana",
+    url: "https://5dd3981940faa.streamlock.net:443/thikanatv/thikanatv/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/6d1aaa03b84a69992940873fc11af8fc",
+    country: "Global"
+  },
+  {
+    id: "ext-6923w6usv",
+    name: "Global TV",
+    url: "https://tvsen6.aynaott.com/globaltvhd/index.m3u8?e=1779283760&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=9877fe1456ffd7b4e155ff0dc042c176",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/ffd7ba9b76ad555933f94bcb7ff26b44",
+    country: "Global"
+  },
+  {
+    id: "ext-ts0g8tyzj",
+    name: "NEXUS TV",
+    url: "https://tvsen6.aynaott.com/nexustv/index.m3u8?e=1779283761&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=bbcba35ac711c3545a56b3580503ee00",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/90635c3edf6e3c8dd92210b7248f1fa0",
+    country: "Global"
+  },
+  {
+    id: "ext-34g25bxex",
+    name: "Bangla TV",
+    url: "https://tvsen6.aynaott.com/banglatv/index.m3u8?e=1779283758&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=f3e9e2737e35147900c0f4add619ead6",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/e42ecfa90e3d6b15bdb7fea5ef673864",
+    country: "Global"
+  },
+  {
+    id: "ext-elsjw5wbe",
+    name: "Rajdhani TV",
+    url: "https://stream.shariarsuvo.com/hls6/rajdhaniweb.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/1R2pmNS1/images-(12).jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-lr8cuu2mb",
+    name: "NRB TV",
+    url: "https://app.ncare.live/live-orgin/nrb-eu.stream/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/4yfxvgj5/images-(13).jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-1fp4ymuzc",
+    name: "Bangla\",Islamic TV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1724/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1772728412891.png",
+    country: "Global"
+  },
+  {
+    id: "ext-ir24yxtss",
+    name: "Bangla\",Peace TV",
+    url: "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v2a1/mono.m3u8",
+    category: "BENGALI",
+    logo: "https://i.ibb.co/Gfw89mC/20240804-033102.png",
+    country: "Global"
+  },
+  {
+    id: "ext-gj5cqpco7",
+    name: "Bangla\",Peace TV 2",
+    url: "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8?sid=s7AaNdTzDE2912wNcPLejQ",
+    category: "BENGALI",
+    logo: "https://i.ibb.co/Gfw89mC/20240804-033102.png",
+    country: "Global"
+  },
+  {
+    id: "ext-gniquaupd",
+    name: "Bangla\",G Series Drama",
+    url: "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+    category: "BENGALI",
+    logo: "https://raw.githubusercontent.com/Rakib49/Rakibiptv/main/images%20(7).jpeg",
+    country: "Global"
+  },
+  {
+    id: "ext-ihy9524mm",
+    name: "Bangla\",Star News",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770189826301.png",
+    country: "Global"
+  },
+  {
+    id: "ext-aadvclvqo",
+    name: "Bangla\",BTV",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/9b6f35f73a099b7a5885a970523c5f78",
+    country: "Global"
+  },
+  {
+    id: "ext-h9oh9jlyp",
+    name: "Bangla\",BTV CTG",
+    url: "https://tvsen6.aynaott.com/btvctg/index.m3u8?e=1779283747&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=9bca925fbdfe526b29d41ab7802348ec",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/00da8a07fb26b2fb79359ee535e4c7bc",
+    country: "Global"
+  },
+  {
+    id: "ext-c8g3w5sqy",
+    name: "BTV NATIONAL HD",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/1709.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/9b6f35f73a099b7a5885a970523c5f78",
+    country: "Global"
+  },
+  {
+    id: "ext-hi95q337o",
+    name: "Asian TV",
+    url: "https://tvsen6.aynaott.com/asiantv/index.m3u8?e=1779283756&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=46e2c2d74460202bdd6638ed54273e2a",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/5282cec3a2e9349b750540d658cf1b6c",
+    country: "Global"
+  },
+  {
+    id: "ext-p9u11shhb",
+    name: "Movie Bangla TV",
+    url: "https://edge2.roarzone.net:8447/roarzone/edge3/movie_bangla/index.m3u8?token=f1153ce106f107a9c3e37bd2b551e3d0184519c3-cfc48222db91c2002e7fae0d54efda6b-1780020918-1780010118",
+    category: "BENGALI",
+    logo: "https://tvassets.roarzone.net/images/86.png",
+    country: "Global"
+  },
+  {
+    id: "ext-q37cr550c",
+    name: "Desh TV",
+    url: "https://tvsen6.aynaott.com/deshtv/index.m3u8?e=1779283755&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=9cf4584fd86e1427935f23b30fd28799",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/d10390e5434e8cb44172257abd714beb",
+    country: "Global"
+  },
+  {
+    id: "ext-irrybaeit",
+    name: "Boishakhi TV",
+    url: "https://tvsen6.aynaott.com/boishakhitv/index.m3u8?e=1779283755&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=f3f4ec98ffbd9567c21e8b2ee98e32d5",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/58658d4594ca1ff3c5031c9d8e3d9fc0",
+    country: "Global"
+  },
+  {
+    id: "ext-4rtm6i9mi",
+    name: "SATV",
+    url: "https://tvsen6.aynaott.com/satv/index.m3u8?e=1779283757&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=336f19de5e4aacae753d7524d86d1a89",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/f710d2ff532cb7e7b75566232c5b72d3",
+    country: "Global"
+  },
+  {
+    id: "ext-3u7jz3pam",
+    name: "Ananda TV",
+    url: "https://tvsen6.aynaott.com/anandatv/index.m3u8?e=1779283759&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=504b9350b4703116ca4ab20e4013288e",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/897698f593fc07974fc46881a440733d",
+    country: "Global"
+  },
+  {
+    id: "ext-xjvgy6vzt",
+    name: "My TV",
+    url: "https://tvsen6.aynaott.com/mytv/index.m3u8?e=1779283760&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=0a2ae0189a44e789d3fecffe5a474ec3",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/c5b2c623863fbe4033d59d52ff7371ac",
+    country: "Global"
+  },
+  {
+    id: "ext-ihkzle6tl",
+    name: "Deshe Bideshe",
+    url: "https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8",
+    category: "BENGALI",
+    logo: "https://pbs.twimg.com/profile_images/739539785304281088/zMwNO936_400x400.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-gfe09pvd0",
+    name: "Mohona TV",
+    url: "https://tvsen6.aynaott.com/mohonatv/index.m3u8?e=1779283762&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=017ac949515fd9b0181090287f362d2b",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/73082846fdc15d9f0e7268b104c55d92",
+    country: "Global"
+  },
+  {
+    id: "ext-z1hw6dx7r",
+    name: "Nagorik",
+    url: "http://198.195.239.50:8095/nagorik/index.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/QNvqqXb3/images.png",
+    country: "Global"
+  },
+  {
+    id: "ext-auqvwznqh",
+    name: "Channel S",
+    url: "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/chsukoff.stream/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/5tPJcCrR/Channel-S-400.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-a0fw22fj2",
+    name: "Green TV HD",
+    url: "https://tvsen6.aynaott.com/GreenTvHD/index.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/sxCR3jm7/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-334q9of0d",
+    name: "Deshi TV",
+    url: "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/yxtg5FPs/download.png",
+    country: "Global"
+  },
+  {
+    id: "ext-yekq6w0r9",
+    name: "ME TV",
+    url: "https://iptvbd.live/metv1080/1080.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/s2j9CCS7/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-w2eh0y85k",
+    name: "Enterr 10 Bangla",
+    url: "https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/0y8JbdQP/download.png",
+    country: "Global"
+  },
+  {
+    id: "ext-m0rxj66j2",
+    name: "Bangla\",Program Promo",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778087459461.png",
+    country: "Global"
+  },
+  {
+    id: "ext-azfj97veh",
+    name: "FIFA+ Channel",
+    url: "https://37b4c228.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/6f5437c5-e015-4754-8476-c8c6d27d3a55/1.m3u8",
+    category: "SPORTS",
+    logo: "https://i.postimg.cc/TYJGfFL0/unnamed.webp",
+    country: "Global"
+  },
+  {
+    id: "ext-m1mcpwc4g",
+    name: "Sports\",T SPORTS",
+    url: "https://amitomar.bdixbd.net/hoichoi.pro1/tracks-v1/index.m3u8",
+    category: "FIFA",
+    logo: "https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4",
+    country: "Global"
+  },
+  {
+    id: "ext-3epkbsagi",
+    name: "T Sports HD",
+    url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8?e=1779283784&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=3b4c5a2cfa872fa7f91ffbfb4aa0f658",
+    category: "SPORTS",
+    logo: "https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4",
+    country: "Global"
+  },
+  {
+    id: "ext-f4v10z5f9",
+    name: "T Sports 1",
+    url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8",
+    category: "SPORTS",
+    logo: "https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4",
+    country: "Global"
+  },
+  {
+    id: "ext-1rccjs42v",
+    name: "Bangla\",Star Jalsha",
+    url: "https://yupptvcatchupire.yuppcdn.net/preview/starjalsha/1800.m3u8",
+    category: "BENGALI",
+    logo: "https://raw.githubusercontent.com/Rakib49/Rakibiptv/main/images%20(9).jpeg",
+    country: "Global"
+  },
+  {
+    id: "ext-r9qftot4d",
+    name: "Bangla\",Colors Bangla",
+    url: "https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/D0kXnMj1/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-sn2h5bkeq",
+    name: "Bangla, Kids\",Gopal Bhar",
+    url: "https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/Twh9bqH3/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-fuxf8kfu2",
+    name: "Bangla\",ZEE BANGLA CINEMA",
+    url: "https://edge2.roarzone.net:8447/roarzone/edge3/zee_bangla_cinema/index.m3u8?token=33eb90cb5993505e7adebcdc9fe5a680f5ff40b4-89433e784e249e183a59446474d0fff1-1780020920-1780010120",
+    category: "BENGALI",
+    logo: "https://tvassets.roarzone.net/images/29.png",
+    country: "Global"
+  },
+  {
+    id: "ext-ba9af7wit",
+    name: "Indian Bangla, Movies\",Jalsha Movies HD",
+    url: "http://198.195.239.50:8095/JalshaMovies/index.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/pLH5YtWp/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-g8bez7r7l",
+    name: "kolkata TV",
+    url: "https://tvsen6.aynaott.com/kolkatatv/index.m3u8?e=1779283837&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=8cc8bac4fecb91a1f2e5443bbc180545",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/c355110e9cbebd89649a95f0f0fd77da",
+    country: "Global"
+  },
+  {
+    id: "ext-353ydkzrg",
+    name: "Bangla\",Rongeen TV",
+    url: "https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/KYXsFJwR/IMG-20260529-210059.png",
+    country: "Global"
+  },
+  {
+    id: "ext-m3cbd8xrg",
+    name: "Bangla\",Sonic Bangla",
+    url: "http://103.204.43.87:8080/live/1/1/274.m3u8",
+    category: "BENGALI",
+    logo: "https://jiotvimages.cdn.jio.com/dare_images/images/Sonic_Bangla.png",
+    country: "Global"
+  },
+  {
+    id: "ext-20owk5a2k",
+    name: "ABP Ananda",
+    url: "https://amg01448-samsungin-abpananda-samsungin-ad-pw.amagi.tv/playlist/amg01448-samsungin-abpananda-samsungin/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://i.postimg.cc/t7Gn9VtZ/abpananda.png",
+    country: "Global"
+  },
+  {
+    id: "ext-qvt6b6ngt",
+    name: "Bangla\",ZEE BANGLA",
+    url: "https://tvsen6.aynaott.com/ZeeBangla/index.m3u8",
+    category: "BENGALI",
+    logo: "https://tvassets.roarzone.net/images/34.png",
+    country: "Global"
+  },
+  {
+    id: "ext-ray2390r2",
+    name: "Bangla\",TV9 Bangla",
+    url: "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/7b93f6be496c9fd25769b09970180c4c",
+    country: "Global"
+  },
+  {
+    id: "ext-mrrbu5rw0",
+    name: "Bangla\",DD Bangla",
+    url: "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7ff57cc9046b4c188b51a0d506f36e7f/index_3.m3u8",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/e5117c508d18adf0a3f2475eb1fd5a9d",
+    country: "Global"
+  },
+  {
+    id: "ext-7mp1eal93",
+    name: "Channel I",
+    url: "https://tvsen6.aynaott.com/channeli/index.m3u8?e=1780236740&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=344430be3b01a6555e7a71f89ade04c1",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/8e998f20a9cc52cb8eb1f52a5bf38204",
+    country: "Global"
+  },
+  {
+    id: "ext-aeo2mxmym",
+    name: "Channel 9",
+    url: "https://tvsen6.aynaott.com/channel9/index.m3u8?e=1780236741&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=318beec50e50e09a42beefe4a9b32802",
+    category: "BENGALI",
+    logo: "https://s3.aynaott.com/storage/a959f06b4fc9e1421f867b6c1601fe43",
+    country: "Global"
+  },
+  {
+    id: "ext-9w1uw9dz2",
+    name: "Sangeet Bangla",
+    url: "https://cdn-4.pishow.tv/live/1143/master.m3u8",
+    category: "MUSICS",
+    logo: "https://s3.aynaott.com/storage/80424ce0682e14e7d51e28de33d5f380",
+    country: "Global"
+  },
+  {
+    id: "ext-t983atq0w",
+    name: "Music India",
+    url: "http://103.175.73.12:8080/live/158/158_0.m3u8",
+    category: "MUSICS",
+    logo: "https://i.postimg.cc/yxHDgzn7/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-9mbhsehp1",
+    name: "AlJazeera",
+    url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1721/output/index.m3u8",
+    category: "NEWS",
+    logo: "https://tstatic.akash-go.com/cms-ui/images/custom-content/1777454219313.png",
+    country: "Global"
+  },
+  {
+    id: "ext-oehuyugik",
+    name: "DW News",
+    url: "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8",
+    category: "NEWS",
+    logo: "https://s3.aynaott.com/storage/0ce159bdea29fce7e3e85d12bc8a10c5",
+    country: "Global"
+  },
+  {
+    id: "ext-ux1hlpzbx",
+    name: "NHK World",
+    url: "https://tvsen6.aynaott.com/nhkworld/index.m3u8?e=1779283773&u=78be6644-0a65-48ec-81a4-089ac65a2619&token=ef0f1eac47ab752c414b7df7414f6f0f",
+    category: "NEWS",
+    logo: "https://s3.aynaott.com/storage/d969a37a7e1bbd49449ae092d34f0549",
+    country: "Global"
+  },
+  {
+    id: "ext-caa94jegc",
+    name: "Wion",
+    url: "https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8",
+    category: "NEWS",
+    logo: "https://i.postimg.cc/TY8q5ggF/download.png",
+    country: "Global"
+  },
+  {
+    id: "ext-ecv9ayf8j",
+    name: "TRT World",
+    url: "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+    category: "NEWS",
+    logo: "https://s3.aynaott.com/storage/f63d4aad95532175f7f44be439f74111",
+    country: "Global"
+  },
+  {
+    id: "ext-96q6ir6gq",
+    name: "Motu Patlu",
+    url: "https://live20.bozztv.com/giatvplayout7/giatv-209622/tracks-v1a1/mono.ts.m3u8",
+    category: "KIDS",
+    logo: "https://i.postimg.cc/yd9D2DDD/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-ulbvuek01",
+    name: "Tom & Jerry TV",
+    url: "https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8",
+    category: "KIDS",
+    logo: "https://i.postimg.cc/fWfLXnmV/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-v0ln0r2yq",
+    name: "Doraemon TV",
+    url: "https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8",
+    category: "KIDS",
+    logo: "https://i.postimg.cc/VvkcnTPs/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-j4z77iajk",
+    name: "Mr Bean Animated",
+    url: "https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8",
+    category: "KIDS",
+    logo: "https://i.postimg.cc/PxL7HjH2/download.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-4wlu1k2u1",
+    name: "STAR SPORTS SELECT1 HD",
+    url: "http://198.195.239.50:8095/StarSportsSelect1/index.m3u8",
+    category: "SPORTS",
+    logo: "https://i.postimg.cc/4xc4h1x0/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-i0gsbcepr",
+    name: "STAR SPORTS 1HD 1",
+    url: "http://198.195.239.50:8095/SonyTenSports5/index.m3u8",
+    category: "SPORTS",
+    logo: "https://i.postimg.cc/KYz13MCB/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-it8mkk29i",
+    name: "REAL MADRID TV",
+    url: "https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8",
+    category: "SPORTS",
+    logo: "https://i.postimg.cc/yxfPT7rC/172735216318-logo-vertical-negativo-1.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-zfvpl41ys",
+    name: "BEIN SPORT EXTRA Ñ 🇪🇸",
+    url: "https://bein-esp-xumo.amagi.tv/playlistR1080p.m3u8",
+    category: "SPORTS",
+    logo: "https://i.postimg.cc/kGBmsgXK/images.png",
+    country: "Global"
+  },
+  {
+    id: "ext-1nw5mx994",
+    name: "Movies\",SONY MAX HD",
+    url: "http://198.195.239.50:8095/SonyMAX/index.m3u8",
+    category: "HINDI",
+    logo: "https://i.postimg.cc/MTzqj2cJ/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-mcvjlc0wh",
+    name: "Drama\",SONY TV HD",
+    url: "http://198.195.239.50:8095/SonyTv/index.m3u8",
+    category: "HINDI",
+    logo: "https://i.postimg.cc/nrQRFMHr/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-ud8f29vvh",
+    name: "Drama\",STAR PLUS HD",
+    url: "http://198.195.239.50:8095/StarPlus/index.m3u8",
+    category: "HINDI",
+    logo: "https://i.postimg.cc/43khqd0Y/images.jpg",
+    country: "Global"
+  },
+  {
+    id: "ext-4wn0hdvos",
+    name: "Movies\",STAR GOLD HD",
+    url: "http://198.195.239.50:8095/StarGold/index.m3u8",
+    category: "HINDI",
+    logo: "https://i.postimg.cc/8kMkX4S9/sa-ta-ra-ga-la-da-la-ga.jpg",
+    country: "Global"
+  }
+
 ];
+

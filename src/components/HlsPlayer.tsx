@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Hls from 'hls.js';
 import { 
-  Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, 
-  RotateCcw, AlertCircle, Sparkles, Tv, HelpCircle 
+  Play, Pause, Volume2, Volume1, VolumeX, Maximize2, Minimize2, 
+  RotateCcw, AlertCircle, Sparkles, Tv, HelpCircle, PictureInPicture 
 } from 'lucide-react';
 import { TvChannel } from '../types';
 
@@ -24,7 +24,25 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
   const [aspectRatio, setAspectRatio] = useState<'fit' | 'fill' | 'stretch'>('fit');
   const [showControls, setShowControls] = useState(true);
   const [corsWarning, setCorsWarning] = useState(false);
+  const [isPiPSupported, setIsPiPSupported] = useState(false);
+  const [dataUsedBytes, setDataUsedBytes] = useState<number>(0);
+  const [currentBitrate, setCurrentBitrate] = useState<number>(0);
+
+  useEffect(() => {
+    setIsPiPSupported('pictureInPictureEnabled' in document && document.pictureInPictureEnabled);
+  }, []);
   
+  // Estimate data usage based on current bitrate
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isPlaying && currentBitrate > 0) {
+      interval = setInterval(() => {
+        setDataUsedBytes(prev => prev + (currentBitrate / 8));
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, currentBitrate]);
+
   const hlsRef = useRef<Hls | null>(null);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -58,6 +76,8 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
     setErrorMsg(null);
     setCorsWarning(false);
     setIsBuffering(true);
+    setDataUsedBytes(0);
+    setCurrentBitrate(0);
 
     // Destroy existing Hls instance
     if (hlsRef.current) {
@@ -98,14 +118,25 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
       hls.loadSource(channel.url);
       hls.attachMedia(video);
 
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
         setIsBuffering(false);
+        if (data.levels && data.levels.length > 0) {
+          const level = data.levels[hls.startLevel >= 0 ? hls.startLevel : 0];
+          if (level && level.bitrate) setCurrentBitrate(level.bitrate);
+        }
         video.play()
           .then(() => setIsPlaying(true))
           .catch((err) => {
             console.log("Autoplay blocked or failed:", err);
             setIsPlaying(false);
           });
+      });
+
+      hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
+        const level = hls.levels[data.level];
+        if (level && level.bitrate) {
+          setCurrentBitrate(level.bitrate);
+        }
       });
 
       hls.on(Hls.Events.ERROR, (event, data) => {
@@ -203,6 +234,21 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
       video.volume = val;
       video.muted = val === 0;
       setIsMuted(val === 0);
+    }
+  };
+
+  const togglePiP = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    try {
+      if (document.pictureInPictureElement) {
+        await document.exitPictureInPicture();
+      } else if (document.pictureInPictureEnabled) {
+        await video.requestPictureInPicture();
+      }
+    } catch (error) {
+      console.error("Failed to toggle Picture-in-Picture mode", error);
     }
   };
 
@@ -347,6 +393,22 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
           </div>
         )}
 
+        {/* Data Consumption Overlay */}
+        {!errorMsg && (
+          <div className={`absolute top-4 left-4 flex flex-col items-start gap-1 z-10 pointer-events-none select-none transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+            {currentBitrate > 0 && (
+              <span className="px-2 py-1 text-[10px] font-mono font-medium bg-black/60 text-emerald-400 rounded-md backdrop-blur-xs shadow-md border border-neutral-800">
+                Bitrate: {(currentBitrate / 1000000).toFixed(2)} Mbps
+              </span>
+            )}
+            {dataUsedBytes > 0 && (
+              <span className="px-2 py-1 text-[10px] font-mono font-medium bg-black/60 text-sky-400 rounded-md backdrop-blur-xs shadow-md border border-neutral-800">
+                Data Used: {(dataUsedBytes / (1024 * 1024)).toFixed(1)} MB
+              </span>
+            )}
+          </div>
+        )}
+
         {/* Big Middle Hover Play Button */}
         {!errorMsg && !isBuffering && !isPlaying && (
           <button 
@@ -375,7 +437,7 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
                 onClick={toggleMute}
                 className="p-2 text-white hover:bg-white/10 rounded-lg transition active:scale-95 cursor-pointer"
               >
-                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                {isMuted || volume === 0 ? <VolumeX className="w-5 h-5" /> : (volume < 0.5 ? <Volume1 className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />)}
               </button>
 
               <input 
@@ -385,7 +447,7 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
                 step="0.05"
                 value={isMuted ? 0 : volume}
                 onChange={handleVolumeChange}
-                className="w-16 md:w-24 accent-red-600 h-1 rounded-lg cursor-pointer max-md:hidden"
+                className="w-16 md:w-24 accent-red-600 h-1 rounded-lg cursor-pointer max-sm:hidden"
               />
 
               <span className="text-[11px] font-mono font-medium text-neutral-400">
@@ -418,6 +480,17 @@ export default function HlsPlayer({ channel, onPlayNextFallback }: HlsPlayerProp
               >
                 <RotateCcw className="w-4 h-4" />
               </button>
+
+              {/* PiP Toggle */}
+              {isPiPSupported && (
+                <button
+                  onClick={togglePiP}
+                  title="Picture in Picture"
+                  className="p-2 text-neutral-300 hover:text-white hover:bg-white/10 rounded-lg transition active:scale-95 cursor-pointer"
+                >
+                  <PictureInPicture className="w-4 h-4" />
+                </button>
+              )}
 
               {/* Fullscreen Toggle */}
               <button 

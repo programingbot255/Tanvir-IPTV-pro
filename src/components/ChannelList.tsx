@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Heart, Tv, Star, Flame, Trophy, PlayCircle, Globe } from 'lucide-react';
+import { Search, Heart, Tv, Star, Flame, Trophy, PlayCircle, Globe, Film, Music, Baby, Newspaper, Radio } from 'lucide-react';
 import { TvChannel, CategoryType } from '../types';
 
 interface ChannelListProps {
@@ -15,12 +15,20 @@ interface ChannelListProps {
 const CATEGORIES: { label: string; value: CategoryType; icon: React.ReactNode }[] = [
   { label: 'All Streams', value: 'ALL', icon: <Tv className="w-3.5 h-3.5" /> },
   { label: 'Favorites', value: 'FAVORITES', icon: <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> },
+  { label: 'FIFA World Cup', value: 'FIFA', icon: <Globe className="w-3.5 h-3.5 text-emerald-400" /> },
+  { label: 'Bengali', value: 'BENGALI', icon: <Star className="w-3.5 h-3.5 text-yellow-400" /> },
+  { label: 'Hindi', value: 'HINDI', icon: <Star className="w-3.5 h-3.5 text-orange-400" /> },
+  { label: 'Sports', value: 'SPORTS', icon: <Trophy className="w-3.5 h-3.5 text-sky-400" /> },
+  { label: 'Kids', value: 'KIDS', icon: <Baby className="w-3.5 h-3.5 text-pink-400" /> },
+  { label: 'Movies', value: 'MOVIES', icon: <Film className="w-3.5 h-3.5 text-purple-400" /> },
+  { label: 'Music', value: 'MUSICS', icon: <Music className="w-3.5 h-3.5 text-rose-300" /> },
+  { label: 'News', value: 'NEWS', icon: <Newspaper className="w-3.5 h-3.5 text-blue-300" /> },
+  { label: 'English', value: 'ENGLISH', icon: <Radio className="w-3.5 h-3.5 text-zinc-400" /> },
   { label: 'ESPN Net', value: 'ESPN', icon: <Trophy className="w-3.5 h-3.5 text-yellow-500" /> },
   { label: 'FOX Sports', value: 'FOX SPORTS', icon: <Flame className="w-3.5 h-3.5 text-orange-500" /> },
   { label: 'DAZN Network', value: 'DAZN', icon: <Trophy className="w-3.5 h-3.5 text-blue-500" /> },
   { label: 'Win Sports', value: 'WIN SPORTS', icon: <Flame className="w-3.5 h-3.5 text-emerald-500" /> },
   { label: 'BeIN / Euro', value: 'BEIN SPORT', icon: <Star className="w-3.5 h-3.5 text-pink-500" /> },
-  { label: 'FIFA World Cup', value: 'FIFA', icon: <Globe className="w-3.5 h-3.5 text-emerald-400" /> },
   { label: 'Custom M3U', value: 'CUSTOM', icon: <PlayCircle className="w-3.5 h-3.5 text-indigo-400" /> },
   { label: 'Others', value: 'OTHERS', icon: <Tv className="w-3.5 h-3.5" /> },
 ];
@@ -35,21 +43,37 @@ export default function ChannelList({
   setActiveCategory,
 }: ChannelListProps) {
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [visibleCount, setVisibleCount] = React.useState(30);
 
-  const filteredChannels = channels.filter((ch) => {
-    // Search query matching
-    const matchesSearch = ch.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          (ch.country && ch.country.toLowerCase().includes(searchQuery.toLowerCase())) ||
-                          ch.category.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    if (!matchesSearch) return false;
+  React.useEffect(() => {
+    setVisibleCount(30);
+  }, [searchQuery, activeCategory]);
 
-    // Category matching
-    if (activeCategory === 'ALL') return true;
-    if (activeCategory === 'FAVORITES') return favorites.includes(ch.id);
-    if (activeCategory === 'CUSTOM') return ch.isCustom === true;
-    return ch.category === activeCategory;
-  });
+  const filteredChannels = React.useMemo(() => {
+    return channels.filter((ch) => {
+      // Search query matching
+      const matchesSearch = ch.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            (ch.country && ch.country.toLowerCase().includes(searchQuery.toLowerCase())) ||
+                            ch.category.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      if (!matchesSearch) return false;
+
+      // Category matching
+      if (activeCategory === 'ALL') return true;
+      if (activeCategory === 'FAVORITES') return favorites.includes(ch.id);
+      if (activeCategory === 'CUSTOM') return ch.isCustom === true;
+      return ch.category === activeCategory;
+    });
+  }, [channels, searchQuery, activeCategory, favorites]);
+
+  const displayedChannels = filteredChannels.slice(0, visibleCount);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const bottom = e.currentTarget.scrollHeight - e.currentTarget.scrollTop <= e.currentTarget.clientHeight + 200;
+    if (bottom && visibleCount < filteredChannels.length) {
+      setVisibleCount(prev => prev + 30);
+    }
+  };
 
   return (
     <div className="flex flex-col h-full bg-zinc-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-lg">
@@ -96,7 +120,10 @@ export default function ChannelList({
       </div>
 
       {/* Scrolling List */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-1.5 no-scrollbar max-h-[480px] lg:max-h-none">
+      <div 
+        className="flex-1 overflow-y-auto p-3 space-y-1.5 no-scrollbar max-h-[480px] lg:max-h-none"
+        onScroll={handleScroll}
+      >
         {filteredChannels.length === 0 ? (
           <div className="text-center py-10 px-4">
             <Tv className="w-10 h-10 text-neutral-600 mx-auto mb-3" />
@@ -106,7 +133,7 @@ export default function ChannelList({
             )}
           </div>
         ) : (
-          filteredChannels.map((ch) => {
+          displayedChannels.map((ch) => {
             const isSelected = selectedChannel.id === ch.id;
             const isFav = favorites.includes(ch.id);
 
@@ -127,6 +154,8 @@ export default function ChannelList({
                 {/* Logo wrapper */}
                 <div className="w-10 h-10 rounded-lg overflow-hidden bg-neutral-900 border border-neutral-800 flex items-center justify-center shrink-0">
                   <img
+                    loading="lazy"
+                    decoding="async"
                     src={ch.logo || 'https://images.unsplash.com/photo-1541252260730-0412e8e2108e?w=100&auto=format&fit=crop&q=60'}
                     alt={ch.name}
                     referrerPolicy="no-referrer"
