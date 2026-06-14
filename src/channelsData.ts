@@ -10,36 +10,52 @@ export const INITIAL_CHANNELS: TvChannel[] = [
     country: 'USA'
   },
   {
-    id: 'real-madrid-tv',
-    name: 'Real Madrid TV',
-    url: 'https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8',
-    category: 'OTHERS',
-    logo: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=100&auto=format&fit=crop&q=60',
-    country: 'Spain'
-  },
-  {
-    id: 'red-bull-tv',
-    name: 'Red Bull TV Live',
-    url: 'https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8',
-    category: 'OTHERS',
-    logo: 'https://images.unsplash.com/photo-1567558061911-83d4c96a7acd?w=100&auto=format&fit=crop&q=60',
+    id: 'dsports-fifa',
+    name: 'DSports 1 (FIFA Event)',
+    url: 'http://190.117.20.37:8000/play/a08d/index.m3u8',
+    category: 'FIFA',
+    logo: 'https://images.unsplash.com/photo-1518605368461-1e1252220a22?w=100&auto=format&fit=crop&q=60',
     country: 'Global'
   },
   {
-    id: 'espn-lat',
-    name: 'ESPN LAT',
-    url: 'http://181.191.141.7/Live/51334cbb88db0e050c59ef2d28c53491/local-espnlat_720.m3u8',
-    category: 'ESPN',
-    logo: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=100&auto=format&fit=crop&q=60',
-    country: 'Latin America'
+    id: 'tyc-fifa',
+    name: 'TyC Sports (World Cup)',
+    url: 'http://190.60.37.154:45000/play/a05a/index.m3u8',
+    category: 'FIFA',
+    logo: 'https://images.unsplash.com/photo-1484482360111-e402c55d1487?w=100&auto=format&fit=crop&q=60',
+    country: 'LatAm'
   },
   {
-    id: 'espn-arg',
-    name: 'ESPN Argentina',
-    url: 'http://181.191.141.7/Live/51334cbb88db0e050c59ef2d28c53491/local-espnar_lng.m3u8',
-    category: 'ESPN',
+    id: 'fox-sports-fifa',
+    name: 'Fox Sports 1 (World Cup)',
+    url: 'http://181.191.141.7/Live/51334cbb88db0e050c59ef2d28c53491/local-fox1ar_720.m3u8',
+    category: 'FIFA',
     logo: 'https://images.unsplash.com/photo-1541252260730-0412e8e2108e?w=100&auto=format&fit=crop&q=60',
     country: 'Argentina'
+  },
+  {
+    id: 'bein-1-fifa',
+    name: 'beIN SPORTS 1 (FIFA Edition)',
+    url: 'http://99.27.51.147:8080/BeinSport/index.m3u8',
+    category: 'FIFA',
+    logo: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=100&auto=format&fit=crop&q=60',
+    country: 'Europe'
+  },
+  {
+    id: 'bein-3-fr',
+    name: 'beIN SPORTS 3 (FR)',
+    url: 'http://99.27.51.147:8080/BeinSport3/index.m3u8',
+    category: 'BEIN SPORT',
+    logo: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=100&auto=format&fit=crop&q=60',
+    country: 'France'
+  },
+  {
+    id: 'espn-co',
+    name: 'ESPN CO',
+    url: 'https://tv.topmediatv.net:25463/live/TopMediaWeb/bOteTR8ED1/10685.m3u8',
+    category: 'ESPN',
+    logo: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=100&auto=format&fit=crop&q=60',
+    country: 'Colombia'
   },
   {
     id: 'espn-2',
@@ -58,27 +74,35 @@ export const INITIAL_CHANNELS: TvChannel[] = [
     country: 'Latin America'
   },
   {
+    id: 'espn-4-hd',
+    name: 'ESPN 4 HD',
+    url: 'http://181.78.49.113:9999/play/a07e/index.m3u8',
+    category: 'ESPN',
+    logo: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=100&auto=format&fit=crop&q=60',
+    country: 'Global'
+  },
+  {
+    id: 'espn-5-hd',
+    name: 'ESPN 5 HD',
+    url: 'http://181.78.49.113:9999/play/a07f/index.m3u8',
+    category: 'ESPN',
+    logo: 'https://images.unsplash.com/photo-1541252260730-0412e8e2108e?w=100&auto=format&fit=crop&q=60',
+    country: 'Global'
+  },
+  {
+    id: 'espn-premium',
+    name: 'ESPN Premium',
+    url: 'http://217.26.190.76:8888/play/a0es/index.m3u8',
+    category: 'ESPN',
+    logo: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=100&auto=format&fit=crop&q=60',
+    country: 'Global'
+  },
+  {
     id: 'tnt-sports-arg',
     name: 'TNT Sports ARG',
     url: 'https://1nyaler.streamhostingcdn.top/stream/30/index.m3u8',
     category: 'OTHERS',
     logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=60',
-    country: 'Argentina'
-  },
-  {
-    id: 'tyc-sports-arg',
-    name: 'TyC Sports ARG',
-    url: 'https://1nyaler.streamhostingcdn.top/stream/84/index.m3u8',
-    category: 'OTHERS',
-    logo: 'https://images.unsplash.com/photo-1484482360111-e402c55d1487?w=100&auto=format&fit=crop&q=60',
-    country: 'Argentina'
-  },
-  {
-    id: 'fox-sports-1',
-    name: 'Fox Sports Argentina',
-    url: 'http://181.191.141.7/Live/51334cbb88db0e050c59ef2d28c53491/local-fox1ar_720.m3u8',
-    category: 'FOX SPORTS',
-    logo: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=100&auto=format&fit=crop&q=60',
     country: 'Argentina'
   },
   {
@@ -88,6 +112,22 @@ export const INITIAL_CHANNELS: TvChannel[] = [
     category: 'FOX SPORTS',
     logo: 'https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=100&auto=format&fit=crop&q=60',
     country: 'Latin America'
+  },
+  {
+    id: 'fox-sports-3',
+    name: 'Fox Sports 3',
+    url: 'http://45.5.119.43:4000/play/a024/index.m3u8',
+    category: 'FOX SPORTS',
+    logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=60',
+    country: 'Latin America'
+  },
+  {
+    id: 'usa-fox-soccer',
+    name: 'USA Fox Soccer Plus',
+    url: 'https://tv.topmediatv.net:25463/live/TopMediaWeb/bOteTR8ED1/3414.m3u8',
+    category: 'FOX SPORTS',
+    logo: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=100&auto=format&fit=crop&q=60',
+    country: 'USA'
   },
   {
     id: 'dazn-1',
@@ -103,6 +143,22 @@ export const INITIAL_CHANNELS: TvChannel[] = [
     url: 'http://znty.dyndns.org:5010/hls/eleven2.m3u8',
     category: 'DAZN',
     logo: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=100&auto=format&fit=crop&q=60',
+    country: 'Europe'
+  },
+  {
+    id: 'dazn-3',
+    name: 'DAZN 3',
+    url: 'http://znty.dyndns.org:5010/hls/eleven3.m3u8',
+    category: 'DAZN',
+    logo: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=100&auto=format&fit=crop&q=60',
+    country: 'Europe'
+  },
+  {
+    id: 'dazn-4',
+    name: 'DAZN 4',
+    url: 'http://znty.dyndns.org:5010/hls/eleven4.m3u8',
+    category: 'DAZN',
+    logo: 'https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=100&auto=format&fit=crop&q=60',
     country: 'Europe'
   },
   {
@@ -138,12 +194,36 @@ export const INITIAL_CHANNELS: TvChannel[] = [
     country: 'Colombia'
   },
   {
+    id: 'claro-sports',
+    name: 'Claro Sports',
+    url: 'https://tv.topmediatv.net:25463/live/TopMediaWeb/bOteTR8ED1/103.m3u8',
+    category: 'OTHERS',
+    logo: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=100&auto=format&fit=crop&q=60',
+    country: 'Global'
+  },
+  {
     id: 'tudn-usa',
     name: 'TUDN USA',
     url: 'http://m3u.tvcluboficial.com/m/m/957.m3u8',
     category: 'OTHERS',
     logo: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=100&auto=format&fit=crop&q=60',
     country: 'USA'
+  },
+  {
+    id: 'real-madrid-tv',
+    name: 'Real Madrid TV',
+    url: 'https://rmtv.akamaized.net/hls/live/2043153/rmtv-es-web/bitrate_3.m3u8',
+    category: 'OTHERS',
+    logo: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=100&auto=format&fit=crop&q=60',
+    country: 'Spain'
+  },
+  {
+    id: 'red-bull-tv',
+    name: 'Red Bull TV Live',
+    url: 'https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8',
+    category: 'OTHERS',
+    logo: 'https://images.unsplash.com/photo-1567558061911-83d4c96a7acd?w=100&auto=format&fit=crop&q=60',
+    country: 'Global'
   }
 ];
 

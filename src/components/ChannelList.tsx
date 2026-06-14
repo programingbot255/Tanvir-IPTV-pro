@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Heart, Tv, Star, Flame, Trophy, PlayCircle } from 'lucide-react';
+import { Search, Heart, Tv, Star, Flame, Trophy, PlayCircle, Globe } from 'lucide-react';
 import { TvChannel, CategoryType } from '../types';
 
 interface ChannelListProps {
@@ -20,6 +20,7 @@ const CATEGORIES: { label: string; value: CategoryType; icon: React.ReactNode }[
   { label: 'DAZN Network', value: 'DAZN', icon: <Trophy className="w-3.5 h-3.5 text-blue-500" /> },
   { label: 'Win Sports', value: 'WIN SPORTS', icon: <Flame className="w-3.5 h-3.5 text-emerald-500" /> },
   { label: 'BeIN / Euro', value: 'BEIN SPORT', icon: <Star className="w-3.5 h-3.5 text-pink-500" /> },
+  { label: 'FIFA World Cup', value: 'FIFA', icon: <Globe className="w-3.5 h-3.5 text-emerald-400" /> },
   { label: 'Custom M3U', value: 'CUSTOM', icon: <PlayCircle className="w-3.5 h-3.5 text-indigo-400" /> },
   { label: 'Others', value: 'OTHERS', icon: <Tv className="w-3.5 h-3.5" /> },
 ];

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Tv, Heart, Radio, Plus, Settings, AlertTriangle, Sparkles, 
-  HelpCircle, MessageSquare, ListVideo, Layers, Globe, ShieldAlert, Cpu 
+  HelpCircle, MessageSquare, ListVideo, Layers, Globe, ShieldAlert, Cpu, X 
 } from 'lucide-react';
 
 import { TvChannel, CategoryType } from './types';
@@ -44,6 +44,7 @@ export default function App() {
   // App tabs & view layouts
   const [activeTab, setActiveTab] = useState<'chat' | 'importer'>('chat');
   const [currentTime, setCurrentTime] = useState<string>('');
+  const [showBanner, setShowBanner] = useState(true);
 
   // Combine static and custom channels on mount / update
   useEffect(() => {
@@ -177,38 +178,46 @@ export default function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 lg:p-8 flex flex-col gap-6">
         
         {/* Upper Feature: Banner & App Notification */}
-        <div className="bg-gradient-to-r from-red-950/20 via-zinc-900 to-zinc-900 border border-neutral-800 rounded-2xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm animate-fade-in">
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg bg-red-600/15 flex items-center justify-center text-red-500 shrink-0">
-              <Sparkles className="w-5 h-5" />
+        {showBanner && (
+          <div className="relative bg-gradient-to-r from-red-950/20 via-zinc-900 to-zinc-900 border border-neutral-800 rounded-2xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm animate-fade-in pr-10">
+            <button 
+              onClick={() => setShowBanner(false)}
+              className="absolute top-3 right-3 p-1.5 text-neutral-500 hover:text-white hover:bg-neutral-800 rounded-full transition active:scale-95 cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-lg bg-red-600/15 flex items-center justify-center text-red-500 shrink-0">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-white">Advanced IPTV HLS Broadcaster & Streaming App</h3>
+                <p className="text-xs text-neutral-400 font-sans mt-0.5 max-w-3xl">
+                  We pre-loaded your PDF sports channels. Use our built-in M3U Playlist parser up next to paste any custom list link and test without limits!
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Advanced IPTV HLS Broadcaster & Streaming App</h3>
-              <p className="text-xs text-neutral-400 font-sans mt-0.5">
-                We pre-loaded your PDF sports channels. Use our built-in M3U Playlist parser up next to paste any custom list link and test without limits!
-              </p>
+            <div className="flex gap-2 shrink-0">
+              <a 
+                href="#live-tv-player-container"
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 font-sans text-xs font-semibold text-white rounded-xl transition cursor-pointer active:scale-95 text-center min-w-[120px]"
+              >
+                Tune Player
+              </a>
+              <a 
+                href="#m3u-importer"
+                onClick={() => {
+                  setActiveTab('importer');
+                  const element = document.getElementById('m3u-importer');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 font-sans text-xs text-neutral-300 rounded-xl transition cursor-pointer text-center"
+              >
+                Import M3U List
+              </a>
             </div>
           </div>
-          <div className="flex gap-2">
-            <a 
-              href="#live-tv-player-container"
-              className="px-4 py-2 bg-red-600 hover:bg-red-700 font-sans text-xs font-semibold text-white rounded-xl transition cursor-pointer active:scale-95 text-center min-w-[120px]"
-            >
-              Tune Player
-            </a>
-            <a 
-              href="#m3u-importer"
-              onClick={() => {
-                setActiveTab('importer');
-                const element = document.getElementById('m3u-importer');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 font-sans text-xs text-neutral-300 rounded-xl transition cursor-pointer text-center"
-            >
-              Import M3U List
-            </a>
-          </div>
-        </div>
+        )}
 
         {/* Dynamic Split Grid layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
