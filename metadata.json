@@ -1,0 +1,6 @@
+{
+  "name": "Tanvir IPTV",
+  "description": "A fully responsive live TV streaming application with interactive chat simulation, playlist parsing, and a favorited channels list.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
